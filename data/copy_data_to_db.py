@@ -18,7 +18,7 @@ for file in files:
     # To fix this, we're using str.replace() to get rid of the parentheses.
     data.columns = [column.replace("(","").replace(")","") for column in data.columns]
     print("Uploading {0} to Database".format(file))
-    data.to_sql("{0}.csv".format(file), con=connection, index=False, if_exists="replace")
+    data.to_sql("{0}".format(file), con=connection, index=False, if_exists="replace")
 
 
 connection.close()
