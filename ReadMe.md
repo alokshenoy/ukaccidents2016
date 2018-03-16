@@ -26,5 +26,5 @@ Clone this repo and run the following:
 ```sh
 cd \path\to\repo
 docker build -t ukaccidents2016 .
-docker run ukaccidents2016 
+docker run -p 5432:5432 ukaccidents2016 
 ```
