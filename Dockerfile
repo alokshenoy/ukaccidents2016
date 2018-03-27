@@ -14,4 +14,5 @@ RUN pip3 install sqlalchemy pandas psycopg2
 ADD ./data /data
 WORKDIR /data
 
-ADD move_data.sh /docker-entrypoint-initdb.d/move_data.sh
+ADD 1_move_data.sh /docker-entrypoint-initdb.d/1_move_data.sh
+ADD 2_alter_tables.sql /docker-entrypoint-initdb.d/2_alter_tables.sql
